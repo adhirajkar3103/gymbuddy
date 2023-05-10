@@ -8,6 +8,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/workout',require('./routes/workout'))
+app.use('/user',require('./routes/user'))
 
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
